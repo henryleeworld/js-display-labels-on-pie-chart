@@ -163,24 +163,20 @@ var config = {
         ]
     },
     options: {
-        bezierCurve : false,
+        bezierCurve: false,
         animation: {
             onComplete: done
         },
         responsive: true,
-        legend: {
-            onClick: function(event, legendItem) {},
-            position: 'bottom',
-        },
         /*
-        tooltips: {
+        tooltip: {
             callbacks: {
                 label: (tooltipItems, data) => {
                     return data.datasets[tooltipItems.datasetIndex].data[tooltipItems.index] + '%';
                 },
             },
         },
-        tooltips: {
+        tooltip: {
             enabled: false
         },
         */
@@ -190,18 +186,22 @@ var config = {
                     return value + "%";
                 },
                 color: '#fff',
-            }
+            },
+            legend: {
+                onClick: function(event, legendItem) {},
+                position: 'bottom',
+            },
         }
     },
 };
 
 window.onload = function() {
-    Chart.plugins.register(ChartDataLabels);
+    Chart.register(ChartDataLabels);
     var ctx = document.getElementById('chart-area').getContext('2d');
     window.pieChart = new Chart(ctx, config);
 };
 
 function done() {
-  var url=window.pieChart.toBase64Image();
-  document.getElementById("chart-url").src=url;
+    var url = window.pieChart.toBase64Image();
+    document.getElementById("chart-url").src = url;
 }
