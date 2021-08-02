@@ -167,6 +167,7 @@ var config = {
         animation: {
             onComplete: done
         },
+        aspectRatio: 2,
         responsive: true,
         /*
         tooltip: {

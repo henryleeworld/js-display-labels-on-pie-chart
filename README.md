@@ -11,5 +11,5 @@ $ git clone
 ----
 
 ## 畫面截圖
-![](https://i.imgur.com/eyKrEBw.png)
+![](https://i.imgur.com/gcjzzsN.png)
 > 企劃案如果都只用文字呈現，客戶大概看一頁就想直接關掉，關鍵處若能出現圖表絕對有畫龍點睛之效，圖表中又以圓餅圖使用度最高
